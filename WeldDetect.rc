@@ -1,0 +1,383 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\WeldDetect.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ACER.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 WeldDetect"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "WeldDetect 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2011",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_WELDDETECT_DIALOG DIALOGEX 0, 0, 509, 344
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "焊缝跟踪"
+MENU IDR_MENU1
+FONT 12, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "停",IDC_BUTTON_STOP,434,174,19,19
+    PUSHBUTTON      "右",IDC_BUTTON_RIGHT,457,173,25,22
+    CONTROL         "",IDC_STATIC_CONTINUEGRAB,"Static",SS_BLACKFRAME | 
+                    SS_SUNKEN,0,0,372,257
+    CONTROL         "",IDC_STATIC_TEMPIMAGE,"Static",SS_BLACKFRAME,376,0,129,
+                    130
+    GROUPBOX        "跟踪状态显示:",IDC_STATIC,1,262,371,75
+    PUSHBUTTON      "设置模板",IDC_BUTTON_TEMP,386,240,41,20
+    PUSHBUTTON      "开始",IDC_BUTTON_START,465,240,35,20
+    PUSHBUTTON      "结束",IDC_BUTTON_END,465,267,35,20
+    PUSHBUTTON      "上",IDC_BUTTON_UP,431,149,25,22
+    PUSHBUTTON      "左",IDC_BUTTON_LEFT,404,173,25,22
+    PUSHBUTTON      "下",IDC_BUTTON_DOWN,431,197,25,22
+    GROUPBOX        "控制",IDC_STATIC,376,132,130,205
+    LTEXT           "偏移X:",IDC_STATIC,14,281,26,8
+    LTEXT           "偏移Y:",IDC_STATIC,14,294,25,8
+    LTEXT           "0",IDC_STATIC_OFFSETX,43,279,32,12,SS_SUNKEN
+    LTEXT           "0",IDC_STATIC_OFFSETY,43,293,32,12,SS_SUNKEN
+    LTEXT           "um",IDC_STATIC,77,280,9,8
+    LTEXT           "um",IDC_STATIC,77,294,9,8
+    LTEXT           "匹配度:",IDC_STATIC,14,313,28,8
+    LTEXT           "0",IDC_STATIC_SCORE,43,311,32,12,SS_SUNKEN
+    LTEXT           "计算时间:",IDC_STATIC,154,313,36,8
+    LTEXT           "0",IDC_STATIC_TIME,190,311,26,12,SS_SUNKEN
+    LTEXT           "ms",IDC_STATIC,219,312,9,8
+    CONTROL         "键盘控制",IDC_CHECK_KEY,"Button",BS_AUTOCHECKBOX | 
+                    BS_NOTIFY | WS_TABSTOP,386,268,44,10
+    LTEXT           "模板Y:",IDC_STATIC,155,294,26,11
+    LTEXT           "模板X:",IDC_STATIC,155,281,26,11
+    LTEXT           "当前点X:",IDC_STATIC,285,281,32,11
+    LTEXT           "当前点Y:",IDC_STATIC,285,294,32,11
+    EDITTEXT        IDC_EDIT_TEMPX,183,279,32,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_TEMPY,183,293,32,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDIT_NOWX,321,279,32,12,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_NOWY,321,293,32,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "盖面跟踪",IDC_CHECK_G,"Button",BS_AUTOCHECKBOX | 
+                    BS_NOTIFY | WS_TABSTOP,386,284,44,10
+    LTEXT           "",IDC_INFO,381,317,122,17,SS_SUNKEN
+END
+
+IDD_DIALOG_CALIBRATION DIALOG DISCARDABLE  350, 0, 223, 166
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "标定"
+FONT 10, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "输入参数",IDC_STATIC,7,7,143,86
+    GROUPBOX        "结果",IDC_STATIC,7,101,148,58
+    LTEXT           "起始位置：",IDC_STATIC,60,26,41,8
+    LTEXT           "结束位置：",IDC_STATIC,60,42,41,8
+    LTEXT           "起始位置：",IDC_STATIC,60,57,41,8
+    LTEXT           "结束位置：",IDC_STATIC,60,71,41,8
+    LTEXT           "水平分辨率：",IDC_STATIC,16,117,49,8
+    LTEXT           "垂直分辨率：",IDC_STATIC,16,133,49,8
+    PUSHBUTTON      "退出",IDOK1,168,137,41,19
+    LTEXT           "水平方向",IDC_STATIC,16,26,33,8
+    LTEXT           "垂直方向",IDC_STATIC,16,57,33,8
+    PUSHBUTTON      "重新标定",IDC_BUTTON_RECALI,168,108,41,19
+    PUSHBUTTON      "确认标定",IDC_BUTTON_CALIBRATION,168,79,41,19
+    EDITTEXT        IDC_STATIC_STARTX,102,22,34,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_STATIC_ENDX,102,39,34,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_STATIC_STARTY,102,56,34,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_STATIC_ENDY,102,73,34,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_STATIC_XRESOLUTION,66,114,37,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_STATIC_YRESOLUTION,66,132,37,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "um/pix",IDC_STATIC,107,116,33,12
+    LTEXT           "um/pix",IDC_STATIC,107,134,33,12
+END
+
+IDD_DIALOG_PARAMETER DIALOG DISCARDABLE  0, 0, 143, 132
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "参数设置"
+FONT 10, "MS Sans Serif"
+BEGIN
+    LTEXT           "匹配度",IDC_STATIC,24,16,25,8
+    EDITTEXT        IDC_EDIT_SCORE,60,13,40,14,ES_AUTOHSCROLL
+    LTEXT           "水平扩展",IDC_STATIC,22,48,33,8
+    EDITTEXT        IDC_EDIT_ROI_X,61,44,40,14,ES_AUTOHSCROLL
+    LTEXT           "垂直扩展",IDC_STATIC,22,69,33,8
+    EDITTEXT        IDC_EDIT_ROI_Y,60,65,40,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "确定",IDOK,23,103,33,14
+    PUSHBUTTON      "退出",IDCANCEL,72,103,33,14
+    GROUPBOX        "工作区域",IDC_STATIC,11,31,122,61
+    LTEXT           "像素",IDC_STATIC,106,46,17,8
+    LTEXT           "像素",IDC_STATIC,106,67,17,8
+END
+
+IDD_DIALOG_HISTORY DIALOG DISCARDABLE  0, 0, 241, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "历史记录"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,184,7,50,14
+    PUSHBUTTON      "取消",IDCANCEL,184,24,50,14
+END
+
+IDD_DIALOG_LOGIN DIALOG DISCARDABLE  0, 0, 148, 81
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "口令验证"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,24,48,41,14
+    PUSHBUTTON      "取消",IDCANCEL,79,48,41,14
+    LTEXT           "请输入口令：",IDC_STATIC,18,19,55,10
+    EDITTEXT        IDC_EDIT_PASSWORD,75,18,54,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_SPLASH DIALOG DISCARDABLE  0, 0, 187, 94
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 10, "System"
+BEGIN
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "WeldDetect Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "WeldDetect\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2011\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "WeldDetect.EXE\0"
+            VALUE "ProductName", "WeldDetect 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_WELDDETECT_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 507
+        BOTTOMMARGIN, 341
+    END
+
+    IDD_DIALOG_CALIBRATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DIALOG_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 125
+    END
+
+    IDD_DIALOG_HISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_SPLASH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    MENUITEM "标定",                        ID_MENUITEM_CALIBRATION
+    MENUITEM "参数设置",                    ID_MENUITEM_PARAMETER
+    MENUITEM "历史记录",                    ID_MENUITEM_HISTORY
+    MENUITEM "退出",                        ID_MENUITEM_EXIT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COVER               BITMAP  DISCARDABLE     "res\\bitmap.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 WeldDetect(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\WeldDetect.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

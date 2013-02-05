@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: WeldDetect - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/WeldDetect.res" /d "NDEBUG" /d "_AFXDLL" "C:\Documents and Settings\Administrator\桌面\WeldDetcet9-22实时研华运动控制11-16PID\WeldDetcet\src\WeldDetect\WeldDetect.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15.tmp" with contents
+[
+../../lib/Image.lib ../../lib/Amcl.lib cxcore.lib cv.lib ml.lib cvaux.lib highgui.lib cvcam.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/WeldDetect.pdb" /machine:I386 /out:"Release/WeldDetect.exe" 
+".\Release\CalibrationDlg.obj"
+".\Release\CDialogSK.obj"
+".\Release\CommonFunction.obj"
+".\Release\CustomButton.obj"
+".\Release\HistoryDlg.obj"
+".\Release\ParameterDlg.obj"
+".\Release\PasswordDlg.obj"
+".\Release\SplashDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\WeldDetect.obj"
+".\Release\WeldDetectDlg.obj"
+".\Release\WeldDetect.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP15.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+WeldDetect.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
